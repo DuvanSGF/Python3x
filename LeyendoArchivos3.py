@@ -1,0 +1,7 @@
+file = open("filename.txt", "r")
+file1 = open("longitud.txt", "r")
+str = file.read()
+sgf = file1.read()
+print(len(str))
+print(len(sgf))
+file.close()

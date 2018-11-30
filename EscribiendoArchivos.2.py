@@ -1,0 +1,18 @@
+file = open("prueba.txt", "w")
+file.write("I miss you America")
+file.close()
+file = open("prueba.txt", "r")
+print("Reading initial contents")
+print(file.read())
+print("Finished")
+file.close()
+
+file = open("prueba.txt", "w")
+file.write("I love you Maria Quevedo")
+file.close()
+
+file = open("prueba.txt", "r")
+print("Reading new contents")
+print(file.read())
+print("Finished")
+file.close()
