@@ -1,25 +1,53 @@
 """
-La herencia puede ser tambien indirecta. Una
-clase hereda de otra, y esa clase puede a su vez
-heredar de una tercera clase.
+La funcion super es una util funcion relacionada
+a la herencia que hace referencia a la clase
+padre. Puede ser utilizada para encontrar un metodo
+con un determinado nombre en la superclase objeto.
 """
 
 class A:
-    def method(self):
-        print("A method")
+    def spam(self):
+        print(1)
 
 class B(A):
-    def another_method(self):
-        print("B method")
+    def spam(self):
+        print(2)
+        super().spam()
 
-class C(B):
-    def third_method(self):
-        print("C method ")
+B().spam()
 
-c = C()
-c.method()
-c.another_method()
-c.third_method()
+# super().spam() llama al metodo spam de la superclase
 
-# No es posible la herencia circular
+# Ejercicio
+
+class Animal:
+    def sound(self):
+        print("I'm a new animal")
+
+class Dog(Animal):
+    def sound(self):
+        print("gau")
+
+class Cat(Animal):
+    def meow(self):
+        print("meow")
+
+class imitador(Animal):
+    def sound(self):
+        print("hahah")
+        super().sound()
+
+imitador().sound()
+
+
+
+
+
+
+
+
+
+
+
+
 
